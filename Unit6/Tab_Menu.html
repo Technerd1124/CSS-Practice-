@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> JavaScript Menus</title>
+        <style>
+        </style>
+    </head>
+    <body>
+        <div>
+            <button value="1" onclick="getTab(this.value)">Tea</button>
+            <button value="2" onclick="getTab(this.value)">Coffee</button>
+            <button value="3" onclick="getTab(this.value)">Mojito</button>
+        </div>
+
+
+        <h3 id="DisplayText"></h3>
+
+        <script>
+
+            function getTab(food) {
+
+                var setText = document.getElementById("DisplayText");
+
+                if (food == "1") {
+                    setText.innerHTML = " You've Selected Tea tab"
+                }
+                if (food == "2") {
+                    setText.innerHTML = " You've Selected Coffee tab"
+                }
+                if (food == "3") {
+                    setText.innerHTML = " You've Selected Mojito tab"
+                }
+
+            }
+        </script>
+    </body>
+</html>

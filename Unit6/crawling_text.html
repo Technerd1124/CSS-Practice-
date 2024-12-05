@@ -1,0 +1,57 @@
+<!--     
+    Quetion : 
+    Write a JavaScript that sets a crawling status bar message to the webpage.
+Message is "Welcome to the Mystic World of JavaScript". The message must
+start crawling when the webpage gets loaded. -->
+    <!-- <html>
+    <head>
+        <script>
+        Win = window.open(
+            "",
+            "mywin",
+            "status=1,width=500,height=500,left=50,top=50"
+        );
+
+        var msg = "text is moving";
+
+        var place = 1;
+
+        function Scroll() {
+            Win.document.write(msg.substring(0, place) + "<br>");
+
+            if (place >= msg.length) place = 1;
+            else place++;
+
+            window.setTimeout("Scroll()", 50);
+        }
+        </script>
+    </head>
+    <body onload="Scroll()"></body>
+    </html>
+    <html> -->
+<head>
+    <title>Scrolling Text</title>
+    <script language="JavaScript">
+        var scrollPos = 0; // Initial position to start status bar
+        var maxScroll = 100; // Maximum allowed position
+        var blanks = "";
+        
+        function scrollText(text, milliseconds) {
+            window.setInterval("displayText('" + text + "')", milliseconds);
+        }
+
+        function displayText(text) {
+            window.defaultStatus = blanks + text;
+            ++scrollPos;
+            blanks += " ";
+            if (scrollPos > maxScroll) {
+                scrollPos = 0;
+                blanks = "";
+            }
+        }
+    </script>
+</head>
+<body onload="scrollText('Welcome to the Mystic World of JavaScript', 300)">
+    <p>Watch the text scroll at the bottom of this window!</p>
+</body>
+</html>

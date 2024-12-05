@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Context Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .context-menu {
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: none;
+      z-index: 1000;
+    }
+    .context-menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .context-menu li {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .context-menu li:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+<div id="target-area" style="height: 100vh; background: #f9f9f9;">
+  Right-click anywhere in this area to see the custom context menu.
+</div>
+
+<div class="context-menu" id="context-menu">
+  <ul>
+    <li onclick="alert('Option 1 clicked')">Option 1</li>
+    <li onclick="alert('Option 2 clicked')">Option 2</li>
+    <li onclick="alert('Option 3 clicked')">Option 3</li>
+  </ul>
+</div>
+
+<script>
+  const targetArea = document.getElementById('target-area');
+  const contextMenu = document.getElementById('context-menu');
+
+  // Show custom context menu
+  targetArea.addEventListener('contextmenu', (event) => {
+    event.preventDefault(); // Prevent the default context menu
+    contextMenu.style.display = 'block';
+    contextMenu.style.left = `${event.pageX}px`;
+    contextMenu.style.top = `${event.pageY}px`;
+  });
+
+  // Hide context menu when clicking elsewhere
+  document.addEventListener('click', () => {
+    contextMenu.style.display = 'none';
+  });
+
+  // Optional: Prevent menu overflow
+  window.addEventListener('resize', () => {
+    contextMenu.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>

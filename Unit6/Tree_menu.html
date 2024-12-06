@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Folding Tree Menu</title>
+    <style>
+        #tree-menu {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #tree-menu li {
+            position: relative;
+        }
+
+        #tree-menu li a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        #tree-menu li a:hover {
+            background-color: #f2f2f2;
+        }
+
+        #tree-menu .submenu {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #tree-menu li:hover .submenu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul id="tree-menu">
+        <li>
+            <a href="#">Item 1</a>
+            <ul class="submenu">
+                <li><a href="#">Subitem 1.1</a></li>
+                <li><a href="#">Subitem 1.2</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Item 2</a>
+            <ul class="submenu">
+                <li><a href="#">Subitem 2.1</a></li>
+                <li><a href="#">Subitem 2.2</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        const menuItems = document.querySelectorAll('#tree-menu li');
+
+        menuItems.forEach(item => {
+            const submenu = item.querySelector('.submenu');
+
+            item.addEventListener('click', () => {
+                submenu.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

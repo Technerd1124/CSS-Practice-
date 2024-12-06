@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title><script>
+            function Visite(siteNO)
+            {
+                var page =siteNO.value;
+                if(page){
+                    window.location = page;
+                }
+            }
+            </script>
+    </head>
+    <body>
+        <select  id="sites" onchange="Visite(this)">
+            <option value ="https://google.com"> Google com  </option>
+            <option value ="https://www.yahoo.com/"> yahoo com  </option>
+            <option value="https://www.flipkart.com/">flipkart</option>
+        </select>
+        
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+         
+            var pics = new Array("/1.png", "/2.png", "/3.png" , "/4.png")
+      var counter =0; 
+
+      function ShowSlide(status){
+        if(document.images){
+            counter +=status;
+            if(counter < 0){
+                counter = pics.length-1;
+            }
+            if(counter > (pics.length-1)){
+                counter = 0;
+            }
+
+            document.slides.src=pics[counter];
+
+        }
+      }
+      
+        </script>
+    </head>
+    <body>
+        
+
+        <img src="/chillGuy.png" alt="chillguy" width="100%" height="500" name="slides">
+        <button onclick="ShowSlide(-1)"> Previous</button>
+        <button onclick="ShowSlide(1)"> Next</button>
+    </body>
+</html>

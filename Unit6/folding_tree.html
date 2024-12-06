@@ -4,68 +4,76 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Folding Tree Example</title>
+
+        <style>
+            ul {
+                list-style: none;
+            }
+
+            .caret::before {
+                content: "\25B6";
+                display: inline-block;
+                margin-right: 5px;
+            }
+
+            .caret-down::before {
+                content: "\25BC";
+            }
+
+            .nested {
+                display: none;
+            }
+
+            .active {
+                display: block;
+            }
+        </style>
     </head>
-    <style>
-        ul {
-            list-style: none;
-        }
-        .caret::before {
-            content: "\25B6";
-            display: inline-block;
-            margin-right: 5px;
-        }
-
-        .caret-down::before {
-            content: "\25BC";
-        }
-
-        .nested {
-            display: none;
-        }
-
-        .active {
-            display: block;
-        }
-    </style>
     <body>
         <ul class="tree">
             <li>
                 <span class="caret">ROOT</span>
                 <ul class="nested">
+                    // Branch 1 
                     <li>
-                        <span class="caret">BRANCH1</span>
-                        <ul class="nested">
-                            <li>LEAF 1</li>
-                            <li>
-                                <span class="caret">LEAF 2</span>
-                                <ul class="nested">
-                                    <li>CHOTA LIFE 1</li>
-                                    <li>CHOTA LIFE 2</li>
-                                </ul>
-                            </li>
-                            <li>LEAF 3</li>
-                        </ul>
+                    <span class="caret">BRANCH1</span>
+                     <ul class="nested">
+                         <li>LEAF 1</li>
+                         <li>LEAF 2</li>
+                         <li> LIFE 3</li>
+                     </ul>
+                    
                     </li>
-                    <li><span class="caret">BRANCH2</span></li>
-                    <li><span class="caret">BRANCH3</span></li>
-                </ul>
+                
+            </li>
+            // Banrch 2
+            <li>
+                <span class="caret">BRANCH2</span>
+            </li>
+             // Branch 3 
+            <li>
+                <span class="caret">BRANCH3</span>
             </li>
         </ul>
+        </li>
+        </ul>
+
+
 
         <script>
             const togglers = document.getElementsByClassName("caret");
             for (let i = 0; i < togglers.length; i++) {
-              togglers[i].addEventListener("click", function () {
-                // Toggle the caret-down class for the clicked caret
-                this.classList.toggle("caret-down");
-            
-                // Find the next sibling <ul> (child list) and toggle its visibility
-                const nestedList = this.nextElementSibling;
-                if (nestedList) {
-                  nestedList.classList.toggle("active");
-                  ne
-                }
-              });
+                togglers[i].addEventListener("click", function () {
+                    // Toggle the caret-down class for the clicked caret
+                    this.classList.toggle("caret-down");
+
+                    // Find the next sibling <ul> (child list) and toggle its visibility
+                    const nestedList = this.nextElementSibling;
+                    if (nestedList) {
+                        nestedList.classList.toggle("active");
+                        ne
+                    }
+                });
             }           
         </script>
     </body>

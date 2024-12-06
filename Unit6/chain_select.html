@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Chain Select Menu</title>
+    </head>
+    <body>
+        <form>
+            <select name="DeptMenu" onchange="showMenu(this)">
+                <option > Select Dept</option>
+                <option value="it" > IT</option>
+                <option value="sell">selles </option>
+            </select>
+            
+          
+            <select name="employeeMenu" id="">
+                <option > Employees list </option>
+            </select>
+            
+        </form>
+
+        <script>
+            var employeeMenu = document.forms[0].employeeMenu;
+            var i;
+         
+
+            function showMenu(choice){
+
+                // 1. remove all elemetns 
+                 for(i=employeeMenu.options.length -1; i>0;i--){
+                    employeeMenu.options.remove(i);
+                 }
+
+                 // 2  get the Department
+                 const Dept =choice.value;
+
+                 // 3. Add new Options to Employee according to selected Dept
+                 if( Dept !== ""){
+             
+                    if(Dept === "it"){
+                        employeeMenu.options[1] = new Option("john");
+                        employeeMenu.options[2] = new Option("lily");
+                        employeeMenu.options[3] = new Option("romen");
+                        }
+
+                        if(Dept === "sell"){
+                        employeeMenu.options[1] = new Option("eliana");
+                        employeeMenu.options[2] = new Option("goue");
+                        employeeMenu.options[3] = new Option("elfi");
+                       }
+
+                 }
+
+
+            }
+        </script>
+    </body>
+</html>

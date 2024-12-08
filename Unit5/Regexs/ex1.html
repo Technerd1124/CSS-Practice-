@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Regular Expresssin Practice </title>
+</head>
+<body>
+    
+    <script>
+
+        var Str =" Welcome To MSBTE Campus"
+        var pattern = new RegExp("MSBTE","i");
+        var result = pattern.constructor;
+        document.write(result +"<br>")
+        var result = pattern.exec(Str);
+        document.write(  " exec()  Method -> "+result +"<br>");
+        
+        var result = pattern.test(Str);
+        document.write(  " test() Method -> "+result +"<br>");
+        
+        var result = pattern.toString(Str);
+        document.write(  " toString() Method -> "+result +"<br>");
+        document.write(  " tYPE OF RESULT-> "+ typeof result +"<br>");
+        
+        
+        var result = Str.match(pattern);
+        document.write( " Match()  Method -> "+result +"<br>");
+        
+        
+        var result = Str.search(pattern);
+        document.write( " search()  Method -> "+result +"<br>");
+        
+        
+        var result = Str.replace(pattern,"PCP");
+        document.write( " replace()  Method -> "+result +"<br>");
+        
+        
+
+        if(result)
+        {
+            document.write(" Search Found")
+        }
+        else
+        {
+            document.write("Search Not Found");
+        }
+    </script>
+</body>
+</html>

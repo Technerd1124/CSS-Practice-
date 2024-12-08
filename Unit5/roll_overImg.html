@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rollover on text and Images</title>
+</head>
+<body >
+ 
+        <a  href="" onmouseover="changeCover(1)" > Operating Sytem </a>
+        <br>
+        <a  href="" onmouseover="changeCover(2)">  Adavance  Java </a>
+        <br>
+        <a  href="" onmouseover="changeCover(3)"> Adavance Computer Network </a>
+        <br>
+        <img src="/1.png" id="cover" width="40%">
+    
+    <script>
+        function changeCover(val){
+          var ig = document.getElementById("cover");
+          if(val === 1){
+            ig.src="/1.png"
+          }
+          if(val === 2){
+            ig.src="/2.png"
+          }
+          if(val === 3){
+            ig.src="/3.png"
+          }
+
+
+        }
+    </script>
+</body>
+</html>

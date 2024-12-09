@@ -1,0 +1,33 @@
+<html>
+<body>
+<label for="color">Choose a Background Color:</label>
+<select name="color" id="color" class="color" onchange="changeColor()">
+<option value="red">Red</option>
+<option value="green">Green</option>
+<option value="blue">Blue</option>
+<option value="yellow">Yellow</option>
+</select>
+<script type="text/javascript">
+function changeColor() {
+ var color = document.getElementById("color").value;
+ switch(color){
+ case "green":
+ document.body.style.backgroundColor = "green";
+ break;
+ case "red":
+ document.body.style.backgroundColor = "red";
+ break;
+ case "blue":
+ document.body.style.backgroundColor = "blue";
+ break;
+ case "yellow":
+ document.body.style.backgroundColor = "yellow";
+ break;
+ default:
+ document.body.style.backgroundColor = "white";
+ break;
+ }
+}
+</script>
+</body>
+</html>

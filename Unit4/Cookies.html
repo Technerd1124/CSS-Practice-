@@ -1,0 +1,24 @@
+<html>
+    <head> <script> function writeCookie()
+    { with(document.myform)
+    { document.cookie="Name=" + person.value + ";" ;
+    alert("Cookie written");
+    }
+    } function readCookie()
+    { var x; if(document.cookie=="") x=""; else x=document.cookie;
+   document.write(x);
+    }
+    </script>
+    </head>
+    <body>
+    <form name="myform" action="">
+    Enter your name:
+    <input type="text" name="person"><br>
+    <input type="Reset" value="Set
+   Cookie" type="button"
+   onclick="writeCookie()">
+    <input type="Reset" value="Get"
+   onclick="readCookie()">
+   </form>
+    </body>
+    </html>

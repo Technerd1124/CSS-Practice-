@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkbox Evaluation</title>
+    <script>
+        function state() {
+            // Get the display element
+            var Pin = document.getElementById('stateDisplay');
+            // Initialize the display message
+            Pin.textContent = "You've Selected: ";
+            // Get individual checkboxes by their IDs
+            var red = document.getElementById('red');
+            var blue = document.getElementById('blue');
+            var pink = document.getElementById('pink');
+
+            // Check each checkbox and append the name if selected
+            if (red.checked) {
+                Pin.textContent += "Red ";
+            }
+            if (blue.checked) {
+                Pin.textContent += "Blue ";
+            }
+            if (pink.checked) {
+                Pin.textContent += "Pink ";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>Check a box:</h3>
+    <label for="red">RED</label>
+    <input type="checkbox" id="red" value="1" name="Red">
+    <br>
+    <label for="blue">BLUE</label>
+    <input type="checkbox" id="blue" value="2" name="Blue">
+    <br>
+    <label for="pink">PINK</label>
+    <input type="checkbox" id="pink" value="3" name="Pink">
+    <br><br>
+    <button onclick="state()">Submit</button>
+
+    <p id="stateDisplay"></p>
+</body>
+</html>

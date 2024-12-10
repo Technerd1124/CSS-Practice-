@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script>
+            function cafe(){
+
+                var line= " you've selected baverages -"
+                with(document.forms.food){
+
+                    if(tea.checked==true){
+                        line+=" tea";
+                    }
+                    if(coffee.checked==true){
+                        line+=" coffee";
+                   }
+                     if(mojito.checked==true){
+                           line+=" mojito";
+                  }
+
+                  alert(line)
+                  
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+
+        <form name="food">
+            tea
+            <input type="checkbox" name="tea" id>
+            <br>
+            coffe
+            <input type="checkbox" name="coffee" id>
+            <br>
+            mojito
+            <input type="checkbox" name="mojito" id>
+            <br>
+            <br>
+            <input type="button" value="Submit " onclick="cafe()">
+        </form>
+    </body>
+</html>

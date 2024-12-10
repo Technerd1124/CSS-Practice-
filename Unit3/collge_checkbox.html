@@ -1,0 +1,75 @@
+<html>
+
+<body>
+
+<form name="contact">
+
+<input type=checkbox name="HS" value="HS"> High School<br
+/>
+
+<input type=checkbox name="BD" value="BD"> Bachelor's
+Degree<br />
+
+<input type=checkbox name="MD" value="MD"> Master
+Degree<br />
+
+<input type=checkbox name="DD" value="DD"> Doctorate
+Degree<br />
+
+<input type=submit value="Process" onclick="Education(this.value)">
+
+</form>
+
+</body>
+
+<script>
+    
+
+        function Education()
+        
+        {
+        
+        var selection = "Your  Selection is : ";
+        
+        with
+        (document.forms.contact)
+        {
+        
+        if(HS.checked==true) {
+        
+        selection += "High School ";
+        
+        }
+        
+        if(BD.checked==true) {
+        
+        selection += "Bachlor's   Degree ";
+        
+        }
+        
+ 
+        
+        if(MD.checked==true) {
+        
+        selection += "Master   Degree ";
+        
+        }
+        
+        if(DD.checked==true) {
+        
+        selection +=
+        "Doctorate Degree ";
+        
+        }
+        
+        }
+        
+        alert(selection)
+        
+        }
+        
+       
+        
+       
+</script>
+</html>

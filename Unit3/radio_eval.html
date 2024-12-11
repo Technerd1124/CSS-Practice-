@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script>
+            function showList(op){
+                var FoodList = document.forms.food.FoodList;
+                    if(op == 1){
+                        FoodList.options[1].text ="Mango";
+                        FoodList.options[2].text ="banana";
+                        FoodList.options[3].text ="Orange";
+                    }
+                    if(op == 2){
+                        FoodList.options[1].text ="Onion";
+                        FoodList.options[2].text ="carrot";
+                        FoodList.options[3].text ="Potato";
+                    }
+                
+            }
+          
+        </script>
+    </head>
+    <body>
+        
+        <form name="food">
+            check a option 
+            <br>
+            Fruits
+            <input type="radio" name="food" id="" onclick="showList(1)">
+            <br>
+            Vegs
+            <input type="radio" name="food" id="" onclick="showList(2)">
+
+            <br>
+            <select name="FoodList" id="">
+                <option > -- select Options -- </option>
+                <option >  </option>
+                <option ></option>
+                <option > </option>
+            </select>
+        </form>
+        
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="setTimer()">Start time</button>
+    <button onclick="clearIN()">Stop time</button>
+    <p id="demo"></p>
+<script>
+    
+    var line = document.getElementById("demo");
+    var timer;
+    function setTimer(){
+        var date = new Date();
+        line.textContent=date;
+    timer=   setInterval(setTimer,1000);
+    }
+ 
+    function clearIN(){
+        clearInterval(timer);
+        line.textContent="cleared";
+    }
+   
+</script>
+</body>
+</html>

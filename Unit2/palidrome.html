@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Check</title>
+</head>
+<body>
+    <script>
+        function isPalindrome(str) {
+            // Step 1: Convert the string to an array
+            var strArray = str.split('');
+            // Step 2: Reverse the array
+            var reversedArray = strArray.reverse();
+            // Step 3: Join the array back into a string
+            var reversedStr = reversedArray.join('');
+            // Step 4: Compare the original string with the reversed string
+            if (str === reversedStr) {
+                document.write(`${str} is a Palindrome String`);
+            } else {
+                document.write(`${str} is not a Palindrome String`);
+            }
+        }
+
+        // Test the function
+        isPalindrome("hello");
+        document.write("<br>"); // Adding a line break
+        isPalindrome("madam");
+    </script>
+</body>
+</html>

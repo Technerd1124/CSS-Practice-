@@ -1,0 +1,29 @@
+
+<html>
+<body>
+<script>
+function mergearr(arr1, arr2)
+{
+// merge two arrays
+document.write(arr1 +"<BR>");
+document.write(arr2 +"<BR>");
+
+var arr = arr1.concat(arr2);
+document.write("Contacatinated :" + arr +"<br>");
+
+var uniqueArr = [];
+// loop through array
+for(var i of arr) {
+if(uniqueArr.indexOf(i) === -1)
+{
+uniqueArr.push(i);
+}
+}
+document.write("Unique Array ater remove Dups :"+uniqueArr);
+}
+var array1 = [1, 2, 3,6,8];
+var array2 = [2, 3, 5,56,78,3]
+mergearr(array1, array2);
+</script>
+</body>
+</html>
